@@ -9,7 +9,7 @@ const router = require("express").Router();
 router.get("/", (req, res) => {
   // Rend le template 'home.pug' et l'envoie au navigateur client
   // Le moteur Pug va convertir le fichier home.pug en HTML
-  res.render("home");
+  res.render("tweets/tweet-list");
 });
 
 // === EXPORT DU ROUTEUR ===
