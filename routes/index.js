@@ -1,6 +1,9 @@
 // === DÉFINITION DES ROUTES ===
 // Import et création d'un routeur Express pour organiser les routes de l'application
 const router = require("express").Router();
+const api = require('./api'); 
+
+router.use('/api', api); 
 
 // === ROUTE PRINCIPALE ===
 // Route GET pour la page d'accueil (/)

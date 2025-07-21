@@ -13,9 +13,9 @@ const tweetSchema = schema({
   // Champ 'content' : contenu du tweet
   content: {
     type: String, // Type de données : chaîne de caractères
-    maxlength: 140, // Longueur maximale : 140 caractères (comme Twitter classique)
-    minlength: 1, // Longueur minimale : au moins 1 caractère
-    required: true, // Champ obligatoire : un tweet ne peut pas être vide
+    maxlength: [140, "Tweet trop long"], // Longueur maximale : 140 caractères (comme Twitter classique)
+    minlength: [1, "Tweet trop court"], // Longueur minimale : au moins 1 caractère
+    required: [true, "Champ requis"], // Champ obligatoire : un tweet ne peut pas être vide
   },
 });
 
