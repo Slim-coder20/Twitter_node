@@ -1,3 +1,4 @@
+
 // === IMPORTS DES MODULES ===
 // Import du framework Express pour créer l'application web
 const express = require("express");
@@ -7,6 +8,8 @@ const morgan = require("morgan");
 const path = require("path");
 // Import de la configuration de base de données - initialise la connexion MongoDB via Mongoose
 require("./database");
+
+
 // === INITIALISATION DE L'APPLICATION ===
 // Création de l'instance Express qui représente notre application web
 const app = express();

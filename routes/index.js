@@ -12,6 +12,9 @@ router.get("/", (req, res) => {
   res.render("tweets/tweet-list");
 });
 
+router.get("/tweet/new", (req, res) => {
+  res.render("tweets/tweet-form"); 
+})
 // === EXPORT DU ROUTEUR ===
 // Exporte le routeur pour pouvoir l'utiliser dans app.js
 // IMPORTANT : bien écrire "exports" (avec un 's') et non "export"
