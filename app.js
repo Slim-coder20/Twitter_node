@@ -5,7 +5,8 @@ const express = require("express");
 const morgan = require("morgan");
 // Import du module Path de Node.js pour gérer les chemins de fichiers
 const path = require("path");
-require('./database'); 
+// Import de la configuration de base de données - initialise la connexion MongoDB via Mongoose
+require("./database");
 // === INITIALISATION DE L'APPLICATION ===
 // Création de l'instance Express qui représente notre application web
 const app = express();
