@@ -2,6 +2,7 @@
 // Import et création d'un routeur Express pour organiser les routes de l'application
 const router = require("express").Router();
 const api = require('./api'); 
+const Tweet = require('../database/models/tweet.model'); 
 
 router.use('/api', api); 
 
@@ -12,7 +13,10 @@ router.use('/api', api);
 router.get("/", (req, res) => {
   // Rend le template 'home.pug' et l'envoie au navigateur client
   // Le moteur Pug va convertir le fichier home.pug en HTML
-  res.render("tweets/tweet-list");
+  Tweet.find({})
+        .exec()
+        .then(tweets =>  res.render("tweets/tweet-list", { tweets}));
+ 
 });
 
 router.get("/tweet/new", (req, res) => {
